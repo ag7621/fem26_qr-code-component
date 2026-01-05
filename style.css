@@ -3,8 +3,8 @@
     --clr-white: hsl(0, 0%, 100%);
 
     --clr-slate-300: hsl(212, 45%, 89%);
-    --clr-slate-300: hsl(216, 15%, 48%);
-    --clr-slate-300: hsl(218, 44%, 22%);
+    --clr-slate-500: hsl(216, 15%, 48%);
+    --clr-slate-900: hsl(218, 44%, 22%);
 
     /* font size */
     --fs-400: 0.9375rem;
@@ -14,8 +14,29 @@
     --fw-bold: 700;
 
     /* components */
+    --clr-main-bg: var(--clr-slate-300);
+    --clr-card-bg: var(--clr-white);
+
+    --clr-text-primary: var(--clr-slate-900);
 }
 
 body {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-primary);
     font-family: "Outfit", sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
+
+.card {
+    background-color: var(--clr-card-bg);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
