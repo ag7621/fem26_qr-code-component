@@ -1,42 +1,82 @@
 :root {
-    /* colors */
-    --clr-white: hsl(0, 0%, 100%);
+  /* colors */
+  --clr-white: hsl(0, 0%, 100%);
 
-    --clr-slate-300: hsl(212, 45%, 89%);
-    --clr-slate-500: hsl(216, 15%, 48%);
-    --clr-slate-900: hsl(218, 44%, 22%);
+  --clr-slate-300: hsl(212, 45%, 89%);
+  --clr-slate-500: hsl(216, 15%, 48%);
+  --clr-slate-900: hsl(218, 44%, 22%);
 
-    /* font size */
-    --fs-400: 0.9375rem;
+  /* font size */
+  --fs-400: 0.938rem;
+  --fs-700: 1.375rem;
 
-    /* font weight */
-    --fw-regular: 400;
-    --fw-bold: 700;
+  /* font weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
 
-    /* components */
-    --clr-main-bg: var(--clr-slate-300);
-    --clr-card-bg: var(--clr-white);
+  /* spacing */
+  --sp-200: 1rem;
+  --sp-300: 1.5rem;
+  --sp-500: 2.5rem;
 
-    --clr-text-primary: var(--clr-slate-900);
+  /* components */
+  --clr-main-bg: var(--clr-slate-300);
+  --clr-card-bg: var(--clr-white);
+
+  --clr-text-heading: var(--clr-slate-900);
+  --clr-text-primary: var(--clr-slate-500);
 }
 
 body {
-    background-color: var(--clr-main-bg);
-    color: var(--clr-text-primary);
-    font-family: "Outfit", sans-serif;
-    font-size: var(--fs-400);
-    font-weight: var(--fw-regular);
+  background-color: var(--clr-main-bg);
+  color: var(--clr-text-primary);
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.2;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    background-color: var(--clr-card-bg);
+  background-color: var(--clr-card-bg);
+  border-radius: 20px;
+  width: 320px;
+  height: 499px;
+  padding: var(--sp-200);
+  padding-bottom: var(--sp-500);
+
+  box-shadow: 0 25px 25px hsla(0, 0%, 0%, 10%);
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: var(--sp-300);
+}
+
+.card_content {
+  padding: 0 1rem;
+}
+
+.card_content h1 {
+  color: var(--clr-text-heading);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0;
+  margin-bottom: 1rem;
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
